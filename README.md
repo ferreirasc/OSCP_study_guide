@@ -29,3 +29,7 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 	- Bobby: 1 (Uses VulnInjector, need to provide you own ISO and key.)
 
 (credits for **@abatchy**)
+
+### Links:
+
+http://hackingandsecurity.blogspot.com.br/2016/04/oscp-related-notes.html
