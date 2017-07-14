@@ -32,8 +32,12 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
 ## Links:
 
-https://www.securitysift.com/offsec-pwb-oscp/   
-http://hackingandsecurity.blogspot.com.br/2016/04/oscp-related-notes.html
+https://www.securitysift.com/offsec-pwb-oscp/ [+Scripts]     
+http://hackingandsecurity.blogspot.com.br/2016/04/oscp-related-notes.html  
+http://rtfm-ctf.org/2017/PWN-PATH-TO-OSCP  
+http://www.techexams.net/forums/security-certifications/110760-oscp-jollyfrogs-tale.html [RECOMMENDED]  
+https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/
+
 
 ## Kioptrix: Level 1
 
