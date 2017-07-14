@@ -32,7 +32,7 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
 ## Links:
 
-https://www.securitysift.com/offsec-pwb-oscp/
+https://www.securitysift.com/offsec-pwb-oscp/ 
 http://hackingandsecurity.blogspot.com.br/2016/04/oscp-related-notes.html
 
 ## Kioptrix: Level 1

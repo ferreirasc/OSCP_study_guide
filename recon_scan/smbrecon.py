@@ -7,7 +7,7 @@ if len(sys.argv) != 2:
     sys.exit(0)
 
 ip = sys.argv[1]
-NBTSCAN = "./samrdump.py %s" % (ip)
+NBTSCAN = "python samrdump.py %s" % (ip)
 nbtresults = subprocess.check_output(NBTSCAN, shell=True)
 if ("Connection refused" not in nbtresults) and ("Connect error" not in nbtresults) and ("Connection reset" not in nbtresults):
 	print "[*] SAMRDUMP User accounts/domains found on " + ip
