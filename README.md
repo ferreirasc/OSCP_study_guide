@@ -32,6 +32,7 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
 ## Links:
 
+http://www.abatchy.com/2017/03/how-to-prepare-for-pwkoscp-noob.html  
 https://www.securitysift.com/offsec-pwb-oscp/ [+Scripts]     
 http://hackingandsecurity.blogspot.com.br/2016/04/oscp-related-notes.html  
 http://rtfm-ctf.org/2017/PWN-PATH-TO-OSCP  
