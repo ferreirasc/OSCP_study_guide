@@ -25,6 +25,9 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 	- pWnOS: 2.0
 	- SkyTower: 1 
 	- IMF
+	- Lord of the Root 1.0.1
+	- Tr0ll
+	- Pegasus
 - Windows 
 	- Metasploitable 3
 	- /dev/random: Sleepy (Uses VulnInjector, need to provide you own ISO and key.)
