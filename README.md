@@ -719,4 +719,4 @@ uid=0(root) gid=0(root) groups=0(root)
 
 There is a SQL injection vulnerability with the Kioptrix3 gallery that can be exploited by the parameter "id" at URI "**gallery/gallery.php?id=1**". 
 
-I can logging in the application with the users discovered by the database and upload a embedded php in an image to invoking a reverse shell to my machine.
+I can log in in the application with the users discovered by the database and upload a embedded php in an image to invoking a reverse shell to my machine.
