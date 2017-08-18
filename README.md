@@ -2,22 +2,22 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
-**Last updated**: 2017-08-01
+**Last updated**: 2017-08-05
 
 ## OSCP-like VMs:
 - Beginner friendly:
-	- Kioptrix: Level 1 (#1)
-	- Kioptrix: Level 1.1 (#2) 
-	- Kioptrix: Level 1.2 (#3) 
-	- Kioptrix: Level 1.3 (#4) 
-	- FristiLeaks: 1.3 
-	- Stapler: 1
-	- PwnLab: init
+	- Kioptrix: Level 1 (#1) [ok]
+	- Kioptrix: Level 1.1 (#2) [ok]
+	- Kioptrix: Level 1.2 (#3) [ok]
+	- Kioptrix: Level 1.3 (#4) [ok]
+	- FristiLeaks: 1.3 [ok]
+	- Stapler: 1 [ok]
+	- PwnLab: init [ok]
 - Intermediate:
-	- Kioptrix: 2014
+	- Kioptrix: 2014 [ok]
 	- Brainpan: 1 (Part 1 of BO is relevant to OSCP. egghunting is out of scope though)
-	- Mr-Robot: 1  
-	- HackLAB: Vulnix
+	- Mr-Robot: 1 [ok] 
+	- HackLAB: Vulnix [ok]
  	- Not so sure (Didn't solve them yet):
 	- VulnOS: 2
 	- SickOs: 1.2
@@ -719,4 +719,4 @@ uid=0(root) gid=0(root) groups=0(root)
 
 There is a SQL injection vulnerability with the Kioptrix3 gallery that can be exploited by the parameter "id" at URI "**gallery/gallery.php?id=1**". 
 
-I can logging in the application with the users discovered by the database and upload a embedded php in an image to invoking a reverse shell to my machine.
+I can log in in the application with the users discovered by the database and upload a embedded php in an image to invoking a reverse shell to my machine.
