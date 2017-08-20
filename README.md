@@ -2,7 +2,7 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
-**Last updated**: 2017-08-18
+**Last updated**: 2017-08-19
 
 ## OSCP-like VMs:
 - Beginner friendly:
@@ -33,7 +33,9 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 	- /dev/random: Sleepy (Uses VulnInjector, need to provide you own ISO and key.)
 	- Bobby: 1 (Uses VulnInjector, need to provide you own ISO and key.)
 
-(credits for **@abatchy**)
+(credits for **@abatchy**)  
+  
+Link to download VMs: http://vulnhub.com
 
 ## Recommended books:
 
