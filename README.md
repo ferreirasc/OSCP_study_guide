@@ -2,7 +2,7 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
-**Last updated**: 2017-08-19
+**Last updated**: 2017-08-28
 
 ## OSCP-like VMs:
 - Beginner friendly:
