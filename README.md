@@ -1,6 +1,6 @@
 # Oscp study
 
-Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
+Notes of my Offensive Security Certified Professional (OSCP) study plan.
 
 **Last updated**: 2017-08-29
 
