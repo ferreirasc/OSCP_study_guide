@@ -2,9 +2,9 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
 
-**Last updated**: 2017-08-28
+**Last updated**: 2017-08-29
 
-## OSCP-like VMs:
+## OSCP-like VMs on Vulnhub:
 - Beginner friendly:
 	- Kioptrix: Level 1 (#1) [ok]
 	- Kioptrix: Level 1.1 (#2) [ok]
@@ -37,6 +37,12 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan. :-)
   
 Link to download VMs: http://vulnhub.com
 
+## Hackthebox.eu (HTB)
+
+I strongly recommend the boxes on the <a href="http://hackthebox.eu"> hackthebox.eu</a> to study for OSCP cert. HTB have a good set of windows boxes to training: **Devel**, **Optimum**, **Bastard**, **Grandpa** and **Blue**. 
+
+Obs: It's necessary solve a little "challenge" to obtain the invite.  
+
 ## Recommended books:
 
 <a href="https://www.amazon.com.br/Penetration-Testing-Hands-Introduction-Hacking/dp/1593275641">Penetration Testing: A Hands-On Introduction to Hacking</a> (+Highly recommended for beginners)  
@@ -47,17 +53,30 @@ Link to download VMs: http://vulnhub.com
 
 ## Links:
 
-https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/ [+Linux privilege escalation]
+https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/ [Linux privilege escalation]  
+http://www.fuzzysecurity.com/tutorials/16.html [Windows privilege escalation]  
 http://www.abatchy.com/2017/03/how-to-prepare-for-pwkoscp-noob.html  
 https://www.securitysift.com/offsec-pwb-oscp/ [+Scripts]     
 http://hackingandsecurity.blogspot.com.br/2016/04/oscp-related-notes.html  
 http://rtfm-ctf.org/2017/PWN-PATH-TO-OSCP  
-http://www.techexams.net/forums/security-certifications/110760-oscp-jollyfrogs-tale.html [RECOMMENDED]  
+http://www.techexams.net/forums/security-certifications/110760-oscp-jollyfrogs-tale.html [RECOMMENDED reading]  
 https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/
+
+## About the final exam
+
+**5 Boxes** on the final exam:  
+
+- 1 box - 25 points: Buffer Overflow (BO). Training writing a custom BO.  
+- 3 boxes - No msf, focus on local privilege escalation. By the way, limited shells give you some points.  
+- 1 box - 10 points. This should be exploited simply with a MS module or just enumerating a exploit-db script.  
+
+... plus 10 points for the laboratory exercises (5 points for the lab box write-ups and 5 points for the writeups to the exercises along the PWK).
+
+***A possible plan***: Focus on the BO and MSF box while testing other 3 boxes with a port scan, fuzzing directories, etc. :D 
 
 ## My write-ups
 
-https://ferreirasc.github.io/post/kioptrix_level_1/  
-https://ferreirasc.github.io/post/kioptrix_level_1_1/  
-https://ferreirasc.github.io/post/kioptrix_level_1_2/  
+<a href="https://ferreirasc.github.io/post/kioptrix_level_1/">Kioptrix level 1</a>  
+<a href="https://ferreirasc.github.io/post/kioptrix_level_1_1/">Kioptrix level 1.1 </a>  
+<a href="https://ferreirasc.github.io/post/kioptrix_level_1_2/">Kioptrix level 1.2 </a>  
 
