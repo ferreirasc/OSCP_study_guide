@@ -41,7 +41,7 @@ Link to download VMs: http://vulnhub.com
 
 I strongly recommend the boxes on the <a href="http://hackthebox.eu"> hackthebox.eu</a> to study for OSCP cert. HTB have a good set of windows boxes to training: **Devel**, **Optimum**, **Bastard**, **Grandpa** and **Blue**. 
 
-Obs: It's necessary solve a little "challenge" to obtain the invite.  
+*PS: It's necessary solve a little "challenge" to obtain the invite.*  
 
 ## Recommended books:
 
@@ -72,7 +72,9 @@ https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/
 
 ... plus 10 points for the laboratory exercises (5 points for the lab box write-ups and 5 points for the writeups to the exercises along the PWK).
 
-***A possible plan***: Focus on the BO and MSF box while testing other 3 boxes with a port scan, fuzzing directories, etc. :D 
+**A possible plan**: Focus on the BO and MSF box while testing other 3 boxes with a port scan, fuzzing directories, etc. :D 
+
+*PS: DEP/ASLR/stack canaries are only part of the OSCE, everything it's a basic overflow on OSCP.*
 
 ## My write-ups
 
