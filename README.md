@@ -2,7 +2,7 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan.
 
-**Last updated**: 2017-08-30
+**Last updated**: 2017-12-24
 
 ## OSCP-like VMs on Vulnhub:
 - Beginner friendly:
