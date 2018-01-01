@@ -1,4 +1,4 @@
-** Suggestion **
+*Suggestion*
 
 * Very interesting tool to generate oneliners by [@mthbernardes](https://github.com/mthbernardes/rsg):
 
