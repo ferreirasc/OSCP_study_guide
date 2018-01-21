@@ -62,20 +62,6 @@ http://rtfm-ctf.org/2017/PWN-PATH-TO-OSCP
 http://www.techexams.net/forums/security-certifications/110760-oscp-jollyfrogs-tale.html [RECOMMENDED reading]  
 https://tulpa-security.com/2016/09/19/prep-guide-for-offsecs-pwk/
 
-## About the final exam
-
-**5 Boxes** on the final exam:  
-
-- 1 box - 25 points: Buffer Overflow (BO). Training writing a custom BO.  
-- 3 boxes - No msf, focus on local privilege escalation. By the way, limited shells give you some points.  
-- 1 box - 10 points. This should be exploited simply with a MS module or just enumerating a exploit-db script.  
-
-... plus 10 points for the laboratory exercises (5 points for the lab box write-ups and 5 points for the writeups to the exercises along the PWK).
-
-**A possible plan**: Focus on the BO and MSF box while testing other 3 boxes with a port scan, fuzzing directories, etc. :D 
-
-*PS: DEP/ASLR/stack canaries are only part of the OSCE, everything it's a basic overflow on OSCP.*
-
 ## My write-ups
 
 <a href="https://ferreirasc.github.io/post/kioptrix_level_1/">Kioptrix level 1</a>  
