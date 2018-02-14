@@ -2,7 +2,7 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan.
 
-**Last updated**: 2018-01-21
+**Last updated**: 2018-02-14
 
 ## OSCP-like VMs on Vulnhub:
 - Beginner friendly:
@@ -51,7 +51,13 @@ I strongly recommend the boxes on the <a href="http://hackthebox.eu"> hackthebox
 <a href="https://www.amazon.com/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470/ref=sr_1_1?ie=UTF8&qid=1492297179&sr=8-1&keywords=the+web+application+hacker%27s+handbook">The Web Application Hacker's Handbook: Finding and Exploiting Security Flaws</a>  
 <a href="https://www.amazon.com/Hacker-Playbook-Practical-Penetration-Testing-ebook/dp/B00J5S9OPU">The Hacker Playbook: Practical Guide To Penetration Testing</a>
 
-## Links:
+## Stack-based buffer overflow links [must-read]:
+
+https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/ [Recommended]
+http://www.tenouk.com/Bufferoverflowc/Bufferoverflow1.html
+https://raw.githubusercontent.com/m0nad/Papers/master/buffer_overflow_iniciantes.txt [PT-BR]
+
+## Other interesting links:
 
 https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/ [Linux privilege escalation]  
 http://www.fuzzysecurity.com/tutorials/16.html [Windows privilege escalation]  
