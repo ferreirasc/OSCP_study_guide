@@ -53,8 +53,8 @@ I strongly recommend the boxes on the <a href="http://hackthebox.eu"> hackthebox
 
 ## Stack-based buffer overflow links [must-read]:
 
-https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/ [Recommended] 
-http://www.tenouk.com/Bufferoverflowc/Bufferoverflow1.html 
+https://www.corelan.be/index.php/2009/07/19/exploit-writing-tutorial-part-1-stack-based-overflows/ [Recommended]  
+http://www.tenouk.com/Bufferoverflowc/Bufferoverflow1.html  
 https://raw.githubusercontent.com/m0nad/Papers/master/buffer_overflow_iniciantes.txt [PT-BR]
 
 ## Other interesting links:
