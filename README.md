@@ -2,7 +2,7 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan.
 
-**Last updated**: 2018-02-14
+**Last updated**: 2018-02-18
 
 ## OSCP-like VMs on Vulnhub:
 - Beginner friendly:
@@ -28,6 +28,7 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan.
 	- Lord of the Root 1.0.1
 	- Tr0ll
 	- Pegasus
+	- SkyTower [ok]
 - Windows 
 	- Metasploitable 3
 	- /dev/random: Sleepy (Uses VulnInjector, need to provide you own ISO and key.)
