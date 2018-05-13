@@ -13,19 +13,20 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan.
 	- FristiLeaks: 1.3 [ok]
 	- Stapler: 1 [ok]
 	- PwnLab: init [ok]
+	- Pluck: 1 [ok]
 - Intermediate:
 	- Kioptrix: 2014 [ok]
 	- Brainpan: 1 (Part 1 of BO is relevant to OSCP. egghunting is out of scope though)
 	- Mr-Robot: 1 [ok] 
 	- HackLAB: Vulnix [ok]
  	- Not so sure (Didn't solve them yet):
-	- VulnOS: 2
-	- SickOs: 1.2
+	- VulnOS: 2 [ok]
+	- SickOs: 1.2 [ok]
 	- /dev/random: scream 
 	- pWnOS: 2.0
 	- SkyTower: 1 
 	- IMF
-	- Lord of the Root 1.0.1
+	- Lord of the Root 1.0.1 [ok]
 	- Tr0ll
 	- Pegasus
 	- SkyTower [ok]
