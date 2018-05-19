@@ -14,6 +14,7 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan.
 	- Stapler: 1 [ok]
 	- PwnLab: init [ok]
 	- Pluck: 1 [ok]
+	- W1R3S: 1.0.1 [ok]
 - Intermediate:
 	- Kioptrix: 2014 [ok]
 	- Brainpan: 1 (Part 1 of BO is relevant to OSCP. egghunting is out of scope though)
