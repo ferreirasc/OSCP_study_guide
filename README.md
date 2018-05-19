@@ -33,7 +33,6 @@ Notes of my Offensive Security Certified Professional (OSCP) study plan.
 	- SkyTower [ok]
 - Windows 
 	- Metasploitable 3
-	- /dev/random: Sleepy (Uses VulnInjector, need to provide you own ISO and key.)
 	- Bobby: 1 (Uses VulnInjector, need to provide you own ISO and key.)
 
 (credits for **@abatchy**)  
