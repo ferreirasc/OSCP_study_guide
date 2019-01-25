@@ -41,7 +41,9 @@ Link to download VMs: http://vulnhub.com
 
 ## Hackthebox.eu (HTB)
 
-I strongly recommend the boxes on the <a href="http://hackthebox.eu"> hackthebox.eu</a> to study for OSCP cert. HTB have a good set of windows boxes to training: **Devel**, **Optimum**, **Bastard**, **Grandpa** and **Blue**. 
+I strongly recommend the boxes on the <a href="http://hackthebox.eu"> hackthebox.eu</a> to study for OSCP cert. HTB have a good set of windows boxes to training: **Devel**, **Optimum**, **Bastard**, **Grandpa**, **Blue**, **Sizzle**, **Reel**.
+
+My hackthebox profile: https://www.hackthebox.eu/profile/5823. Feel free to contact me there :)
 
 *PS: It's necessary solve a little "challenge" to obtain the invite.*  
 
