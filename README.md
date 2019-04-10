@@ -2,7 +2,7 @@
 
 Notes of my Offensive Security Certified Professional (OSCP) study plan.
 
-**Last updated**: 2019-01-24
+**Last updated**: 2019-04-10
 
 ## OSCP-like VMs on Vulnhub:
 - Beginner friendly:
@@ -63,6 +63,7 @@ https://raw.githubusercontent.com/m0nad/Papers/master/buffer_overflow_iniciantes
 
 ## Other interesting links:
 
+https://forum.hackthebox.eu/discussion/1655/oscp-exam-review-2019-notes-gift-inside/p1 [+ EXCELLENT tool from @21y4d to enumeration... I really recommend it :) ]  
 https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/ [Linux privilege escalation]  
 http://www.fuzzysecurity.com/tutorials/16.html [Windows privilege escalation]  
 http://www.abatchy.com/2017/03/how-to-prepare-for-pwkoscp-noob.html  
